@@ -13,7 +13,7 @@
 >
     <testsuites>
         <testsuite name="Connector Extension Test Suite">
-            <directory>./tests/FacebookExtension/</directory>
+            <directory>./tests/</directory>
         </testsuite>
     </testsuites>
 </phpunit>

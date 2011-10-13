@@ -1,16 +1,16 @@
 <?php
 
-namespace Facebook\Tests\Extension;
+namespace TobiassjostenSilexProvider\Facebook\Tests;
 
-use Facebook\FacebookExtension;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
+use TobiassjostenSilexProvider\Facebook\FacebookExtension;
 
 class FacebookExtensionTest extends \PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
-        if (!is_dir(__DIR__ . '/../../../vendor/facebook')) {
+        if (!is_dir(__DIR__ . '/../vendor/facebook')) {
             $this->markTestSkipped('Facebook SDK was not installed.');
         }
     }
@@ -20,7 +20,7 @@ class FacebookExtensionTest extends \PHPUnit_Framework_TestCase
         $app = new Application();
 
         $app['autoloader']->registerNamespaces(array(
-            'Facebook' => __DIR__.'/../../../src',
+            'TobiassjostenSilexProvider\Facebook' => __DIR__.'/../../../',
         ));
 
         $app->register(new FacebookExtension(), array(

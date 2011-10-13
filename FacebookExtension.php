@@ -1,6 +1,6 @@
 <?php
 
-namespace Facebook;
+namespace TobiassjostenSilexProvider\Facebook;
 
 use Silex\Application;
 use Silex\ExtensionInterface;
@@ -18,7 +18,7 @@ class FacebookExtension implements ExtensionInterface
 
         $app['facebook'] = $app->share(function () use ($app) {
             // @TODO: Use proper autoloading when/if Facebook fixes compliance.
-            require_once __DIR__.'/../../vendor/facebook/src/facebook.php';
+            require_once __DIR__.'/vendor/facebook/src/facebook.php';
 
             return new \Facebook(array(
                 'appId'  => $app['facebook.app_id'],
