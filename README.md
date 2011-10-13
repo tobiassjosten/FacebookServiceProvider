@@ -7,7 +7,7 @@ Facebook extension for Silex
 
 First you need to place *Facebook extension* somewhere in your project. You could download and unpack a [tarball][2] or, if you are using Git, you could add it as a submodule.
 
-    $ git submodule add git@github.com:tobiassjosten/facebook-extension.git vendor/facebook
+    $ git submodule add git@github.com:tobiassjosten/facebook-extension.git vendor/TobiassjostenSilexProvider/Facebook
 
 This extension contains a submodule of its own (the actual Facebook SDK) and so you will need to initiate that.
 
@@ -16,10 +16,10 @@ This extension contains a submodule of its own (the actual Facebook SDK) and so 
 Then configure your Silex app to use it. To use the autoloader you need to tell it where to look for the Facebook namespace.
 
     $app['autoloader']->registerNamespaces(array(
-        'Facebook' => __DIR__.'/../vendor/facebook/src',
+        'TobiassjostenSilexProvider\Facebook' => __DIR__.'/../vendor',
     ));
 
-    $app->register(new Facebook\FacebookExtension(), array(
+    $app->register(new TobiassjostenSilexProvider\Facebook\FacebookExtension(), array(
         'facebook.app_id' => '1234567890',
         'facebook.secret' => '7de6da38beb841a75f0ac5becb215f18',
     ));
