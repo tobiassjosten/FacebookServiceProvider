@@ -3,9 +3,9 @@
 namespace TobiassjostenSilexProvider\Facebook;
 
 use Silex\Application;
-use Silex\ExtensionInterface;
+use Silex\ServiceProviderInterface;
 
-class FacebookExtension implements ExtensionInterface
+class FacebookServiceProvider implements ServiceProviderInterface
 {
     public function register(Application $app)
     {

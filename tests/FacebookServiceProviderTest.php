@@ -4,9 +4,9 @@ namespace TobiassjostenSilexProvider\Facebook\Tests;
 
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
-use TobiassjostenSilexProvider\Facebook\FacebookExtension;
+use TobiassjostenSilexProvider\Facebook\FacebookServiceProvider;
 
-class FacebookExtensionTest extends \PHPUnit_Framework_TestCase
+class FacebookServiceProviderTest extends \PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
@@ -23,7 +23,7 @@ class FacebookExtensionTest extends \PHPUnit_Framework_TestCase
             'TobiassjostenSilexProvider\Facebook' => __DIR__.'/../../../',
         ));
 
-        $app->register(new FacebookExtension(), array(
+        $app->register(new FacebookServiceProvider(), array(
             'facebook.app_id' => '1234567890',
             'facebook.secret' => '7de6da38beb841a75f0ac5becb215f18',
         ));

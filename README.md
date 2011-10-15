@@ -1,15 +1,15 @@
-Facebook extension for Silex
+Facebook Service Provider for Silex
 ============================
 
-[Silex][1] extension for loading the Facebook SDK into your apps.
+[Silex][1] Service Provider for loading the Facebook SDK into your apps.
 
 ## Installation
 
-First you need to place *Facebook extension* somewhere in your project. You could download and unpack a [tarball][2] or, if you are using Git, you could add it as a submodule.
+First you need to place *FacebookServiceProvider* somewhere in your project. You could download and unpack a [tarball][2] or, if you are using Git, you could add it as a submodule.
 
-    $ git submodule add git@github.com:tobiassjosten/facebook-extension.git vendor/TobiassjostenSilexProvider/Facebook
+    $ git submodule add git@github.com:tobiassjosten/FacebookServiceProvider.git vendor/TobiassjostenSilexProvider/Facebook
 
-This extension contains a submodule of its own (the actual Facebook SDK) and so you will need to initiate that.
+This repository contains a submodule of its own (the actual Facebook SDK) and so you will need to initiate that.
 
     $ git submodule update --init --recursive
 
@@ -19,7 +19,7 @@ Then configure your Silex app to use it. To use the autoloader you need to tell 
         'TobiassjostenSilexProvider\Facebook' => __DIR__.'/../vendor',
     ));
 
-    $app->register(new TobiassjostenSilexProvider\Facebook\FacebookExtension(), array(
+    $app->register(new TobiassjostenSilexProvider\Facebook\FacebookServiceProvider(), array(
         'facebook.app_id' => '1234567890',
         'facebook.secret' => '7de6da38beb841a75f0ac5becb215f18',
     ));
@@ -43,6 +43,6 @@ Then run the [PHPUnit][4] test suite.
     $ phpunit
 
 [1]: http://silex-project.org/
-[2]: https://github.com/tobiassjosten/facebook-extension/tarball/master
+[2]: https://github.com/tobiassjosten/FacebookServiceProvider/tarball/master
 [3]: http://silex.sensiolabs.org/get/silex.phar
 [4]: http://www.phpunit.de/manual/current/en/index.html
