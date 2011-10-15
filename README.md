@@ -32,5 +32,17 @@ Now you can use it in your application!
         return "Brought to you by {$tobias['name']}!";
     });
 
+## Tests
+
+In order to run the tests you need to fetch [`silex.phar`][3] first.
+
+    $ wget http://silex.sensiolabs.org/get/silex.phar
+
+Then run the [PHPUnit][4] test suite.
+
+    $ phpunit
+
 [1]: http://silex-project.org/
 [2]: https://github.com/tobiassjosten/facebook-extension/tarball/master
+[3]: http://silex.sensiolabs.org/get/silex.phar
+[4]: http://www.phpunit.de/manual/current/en/index.html
