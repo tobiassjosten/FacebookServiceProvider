@@ -9,19 +9,20 @@ First you need to place *FacebookServiceProvider* somewhere in your project. You
 
     $ git submodule add git@github.com:tobiassjosten/FacebookServiceProvider.git vendor/TobiassjostenSilexProvider/Facebook
 
-This repository contains a submodule of its own (the actual Facebook SDK) and so you will need to initiate that.
+Next you need to download the actual Facebook PHP SDK. Like for this Service Provider you can do it in a number of ways, like adding it as a submodule.
 
-    $ git submodule update --init --recursive
+    $ git submodule add https://github.com/facebook/php-sdk.git vendor/facebook-php-sdk
 
-Then configure your Silex app to use it. To use the autoloader you need to tell it where to look for the Facebook namespace.
+Then configure your Silex app to use it. To use the autoloader you need to tell it where to look for the `TobiassjostenSilexProvider\Facebook` namespace.
 
     $app['autoloader']->registerNamespaces(array(
         'TobiassjostenSilexProvider\Facebook' => __DIR__.'/../vendor',
     ));
 
     $app->register(new TobiassjostenSilexProvider\Facebook\FacebookServiceProvider(), array(
-        'facebook.app_id' => '1234567890',
-        'facebook.secret' => '7de6da38beb841a75f0ac5becb215f18',
+        'facebook.class_file' => __DIR__.'/../vendor/facebook-php-sdk/src/facebook.php',
+        'facebook.app_id'     => '1234567890',
+        'facebook.secret'     => '7de6da38beb841a75f0ac5becb215f18',
     ));
 
 Now you can use it in your application!
@@ -38,7 +39,11 @@ In order to run the tests you need to fetch [`silex.phar`][3] first.
 
     $ wget http://silex.sensiolabs.org/get/silex.phar
 
-Then run the [PHPUnit][4] test suite.
+Then you need the Facebook PHP SDK in the tests directory.
+
+    $ git clone https://github.com/facebook/php-sdk.git tests/facebook-php-sdk
+
+Finally run the [PHPUnit][4] test suite.
 
     $ phpunit
 

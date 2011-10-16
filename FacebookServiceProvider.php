@@ -18,7 +18,7 @@ class FacebookServiceProvider implements ServiceProviderInterface
 
         $app['facebook'] = $app->share(function () use ($app) {
             // @TODO: Use proper autoloading when/if Facebook fixes compliance.
-            require_once __DIR__.'/vendor/facebook/src/facebook.php';
+            require_once $app['facebook.class_file'];
 
             return new \Facebook(array(
                 'appId'  => $app['facebook.app_id'],
