@@ -37,7 +37,7 @@ Now you can use it in your application!
 
 In order to run the tests you need to fetch [`silex.phar`][3] first.
 
-    $ wget http://silex.sensiolabs.org/get/silex.phar
+    $ wget http://silex.sensiolabs.org/get/silex.phar -O tests/silex.phar
 
 Then you need the Facebook PHP SDK in the tests directory.
 

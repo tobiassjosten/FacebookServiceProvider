@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../silex.phar';
+require_once __DIR__ . '/silex.phar';
 
 use Symfony\Component\ClassLoader\UniversalClassLoader;
 
