@@ -1,6 +1,6 @@
 <?php
 
-namespace Tobiassjosten\Silex\Provider\Facebook;
+namespace Tobiassjosten\Silex\Provider;
 
 use Silex\Application;
 use Silex\ServiceProviderInterface;
