@@ -12,8 +12,8 @@
          bootstrap="tests/bootstrap.php"
 >
     <testsuites>
-        <testsuite name="Connector Extension Test Suite">
-            <directory>./tests/</directory>
+        <testsuite name="FacebookServiceProvider Test Suite">
+            <directory>./tests/Tobiassjosten</directory>
         </testsuite>
     </testsuites>
 </phpunit>

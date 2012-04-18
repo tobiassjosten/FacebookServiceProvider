@@ -14,7 +14,8 @@
     ],
     "require": {
         "php": "> 5.3.2",
-        "facebook/php-sdk": "dev-master"
+        "facebook/php-sdk": "dev-master",
+        "silex/silex": "dev-master"
     },
     "autoload": {
         "psr-0": {
