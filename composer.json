@@ -1,9 +1,7 @@
 {
     "name": "tobiassjosten/facebook-service-provider",
-    "type": "silex service provider",
     "description": "Silex ServiceProvider for the Facebook SDK",
-    "keywords": ["silex", "service provider", "facebook", "sdk"],
-    "homepage": "https://github.com/tobiassjosten/FacebookServiceProvider",
+    "keywords": ["silex", "service-provider", "facebook", "sdk"],
     "license": "GPL",
     "authors": [
         {
@@ -13,9 +11,9 @@
         }
     ],
     "require": {
-        "php": "> 5.3.2",
+        "php": ">=5.3.2",
         "facebook/php-sdk": "dev-master",
-        "silex/silex": "dev-master"
+        "silex/silex": "1.0.*"
     },
     "autoload": {
         "psr-0": {
