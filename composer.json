@@ -4,7 +4,7 @@
     "description": "Silex ServiceProvider for the Facebook SDK",
     "keywords": ["silex", "service provider", "facebook", "sdk"],
     "homepage": "https://github.com/tobiassjosten/FacebookServiceProvider",
-    "license": "GPL",
+    "license": "Mozilla Public License 2.0",
     "authors": [
         {
             "name": "Tobias Sjösten",
