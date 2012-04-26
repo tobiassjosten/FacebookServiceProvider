@@ -2,7 +2,7 @@
     "name": "tobiassjosten/facebook-service-provider",
     "description": "Silex ServiceProvider for the Facebook SDK",
     "keywords": ["silex", "service-provider", "facebook", "sdk"],
-    "license": "Mozilla Public License 2.0",
+    "license": "MPLv2",
     "authors": [
         {
             "name": "Tobias Sjösten",
