@@ -19,10 +19,6 @@ class FacebookServiceProviderTest extends \PHPUnit_Framework_TestCase
     {
         $app = new Application();
 
-        $app['autoloader']->registerNamespaces(array(
-            'TobiassjostenSilexProvider\Facebook' => __DIR__.'/../../../',
-        ));
-
         $app->register(new FacebookServiceProvider(), array(
             'facebook.app_id'     => '1234567890',
             'facebook.secret'     => '7de6da38beb841a75f0ac5becb215f18',

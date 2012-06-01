@@ -19,15 +19,8 @@ class FacebookServiceProvider implements ServiceProviderInterface
                 'secret' => $app['facebook.secret'],
             ));
         });
-
-        if (isset($app['facebook.class_path'])) {
-            $app['autoloader']->registerPrefix(
-                'Facebook',
-                $app['facebook.class_path']
-            );
-        }
     }
-    
+
     public function boot(Application $app)
     {
     }
