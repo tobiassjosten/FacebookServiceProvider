@@ -3,6 +3,9 @@ Facebook Service Provider for Silex
 
 [Silex][1] Service Provider for loading the [Facebook SDK][2] into your apps.
 
+[![Build Status](https://travis-ci.org/tobiassjosten/FacebookServiceProvider.png?branch=master)](https://travis-ci.org/tobiassjosten/FacebookServiceProvider) 
+[![Dependencies](http://dependency.me/repository/image/tobiassjosten/FacebookServiceProvider/master)](http://dependency.me/repository/branche/tobiassjosten/FacebookServiceProvider/master)
+
 ## Installation
 
 FacebookServiceProvider uses [Composer][3], which makes installing it *dead simple*.
