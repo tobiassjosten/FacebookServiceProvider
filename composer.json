@@ -19,5 +19,6 @@
         "psr-0": {
             "Tobiassjosten\\Silex\\Provider": "lib"
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
